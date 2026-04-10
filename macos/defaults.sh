@@ -5,6 +5,10 @@
 # Set macOS appearance to automatically switch between light and dark mode
 defaults write -g AppleInterfaceStyleSwitchesAutomatically -bool true
 
+# Disable mouse acceleration
+defaults write NSGlobalDomain com.apple.mouse.linear -bool "true"
+defaults write -g com.apple.mouse.scaling -float 6.0
+
 ###############################################################################
 # Night Shift (via nightlight CLI)                                            #
 ###############################################################################
