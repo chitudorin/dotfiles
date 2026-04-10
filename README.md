@@ -1,18 +1,16 @@
 # dotfiles
-Dotfiles for macOS
+This script will install my dotfiles on a secondary non-administrator MacOS account.
+
+## Requirements
+
+- Apple Silicon CPU or 64-bit Intel CPU
+- macOS Sonoma (14) (or higher)
+- Command Line Tools (CLT) for Xcode (from `xcode-select --install`)
+- The Bourne-again shell (i.e. bash)
 
 ## Install
 
-Make sure you have Xcode CLI Tools installed:
 
 ```
-xcode-select --install
-```
-
-Then copy the repo and run the `install.sh` script:
-
-```
-git clone https://github.com/chitudorin/dotfiles.git
-cd dotfiles
-bash install.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/chitudorin/dotfiles/HEAD/remote_install.sh)"
 ```
