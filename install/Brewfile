@@ -1,3 +1,4 @@
 tap "smudge/smudge"
 
 brew "smudge/smudge/nightlight"
+brew "tailscale"

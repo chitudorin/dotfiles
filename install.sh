@@ -16,7 +16,12 @@ setup_brew() {
 }
 
 brew_packages() {
-    brew bundle --file=install/Brewfile
+    brew bundle --file=install/Brewfile || true
+}
+
+brew_casks() {
+    export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
+    brew bundle --file=install/Caskfile || true
 }
 
 macos() {
@@ -36,11 +41,16 @@ case "$1" in
         brew_packages
         macos
         ;;
+    casks)
+        setup_brew
+        brew_casks
+        ;;
     *)
         echo "Running full installation"
         setup_brew
         brew_packages
         macos
+        brew_casks
         echo "Full setup complete"
         ;;
 esac
