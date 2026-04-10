@@ -1,4 +1,11 @@
 ###############################################################################
+# MacOS defaults                                                              #
+###############################################################################
+
+# Set macOS appearance to automatically switch between light and dark mode
+defaults write -g AppleInterfaceStyleSwitchesAutomatically -bool true
+
+###############################################################################
 # Night Shift (via nightlight CLI)                                            #
 ###############################################################################
 
