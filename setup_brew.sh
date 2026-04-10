@@ -14,14 +14,14 @@ ADMIN_CMD="NONINTERACTIVE=1 /bin/bash -c \"\$(curl -fsSL https://raw.githubuserc
 
 read -p "Enter your admin username: " ADMIN_USER
 
-#echo "Authenticating sudo for $ADMIN_USER..."
-#su "$ADMIN_USER" -c "sudo -v"
+echo "You'll be prompted to enter the admin password several times."
 
 su "$ADMIN_USER" -c "sudo -v && $ADMIN_CMD"
 
 if [ $? -eq 0 ]; then
-    echo "Success! Run this to add brew to PATH"
+    echo "Success! Run these to add brew to PATH:"
     echo "echo 'eval \"\$($BREW_BIN shellenv)\"' >> /Users/$NON_ADMIN_USER/.zprofile"
+    echo "eval \"\$($BREW_BIN shellenv)\""
 else
-    echo "Something went wrong"
+    echo "Something went wrong!"
 fi
