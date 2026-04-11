@@ -1,3 +1,4 @@
 tap "smudge/smudge"
 
+brew "dockutil"
 brew "smudge/smudge/nightlight"
