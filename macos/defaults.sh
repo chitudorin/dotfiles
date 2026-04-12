@@ -2,6 +2,9 @@
 # MacOS defaults                                                              #
 ###############################################################################
 
+# Menu bar: show battery percentage
+defaults write com.apple.menuextra.battery ShowPercent YES
+
 # Set macOS appearance to automatically switch between light and dark mode
 defaults write -g AppleInterfaceStyleSwitchesAutomatically -bool true
 
@@ -20,6 +23,7 @@ defaults write com.apple.dock magnification -bool true
 
 # Set magnification size
 defaults write com.apple.dock largesize -int 100
+
 ###############################################################################
 # Night Shift (via nightlight CLI)                                            #
 ###############################################################################
@@ -39,5 +43,12 @@ fi
 # Remove everything from the Dock
 dockutil --remove all --no-restart
 
-killall Dock
 
+###############################################################################
+# Kill affected applications                                                  #
+###############################################################################
+
+
+for app in "Dock" "SystemUIServer";do
+  killall "${app}" &> /dev/null
+done
