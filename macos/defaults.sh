@@ -7,7 +7,7 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Menu bar: show battery percentage
-defaults write com.apple.menuextra.battery ShowPercent YES
+defaults -currentHost write com.apple.controlcenter BatteryShowPercentage -bool true
 
 # Set macOS appearance to automatically switch between light and dark mode
 defaults write -g AppleInterfaceStyleSwitchesAutomatically -bool true
@@ -61,6 +61,6 @@ dockutil --remove all --no-restart
 ###############################################################################
 
 
-for app in "Dock" "SystemUIServer";do
+for app in "Dock" "SystemUIServer" "cfprefsd" "ControlCenter";do
   killall "${app}" &> /dev/null
 done
