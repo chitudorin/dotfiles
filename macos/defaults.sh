@@ -28,6 +28,10 @@ defaults write com.apple.dock magnification -bool true
 # Set magnification size
 defaults write com.apple.dock largesize -int 100
 
+# Disable Desktop icons and widgets
+defaults write com.apple.finder CreateDesktop false
+defaults write com.apple.WindowManager StandardHideWidgets -bool true
+
 ###############################################################################
 # Keyboard & Input                                                            #
 ###############################################################################
