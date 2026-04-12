@@ -59,6 +59,16 @@ fi
 # Remove everything from the Dock
 dockutil --remove all --no-restart
 
+# Add apps to the dock
+dockutil --no-restart --add "/Applications/Safari.app"
+dockutil --no-restart --add "/System/Applications/Utilities/Terminal.app"
+dockutil --no-restart --add "/System/Applications/Mail.app"
+dockutil --no-restart --add "~/Applications/Discord.app"
+dockutil --no-restart --add "~/Applications/Steam.app"
+dockutil --no-restart --add "~/Applications/Heroic.app"
+dockutil --no-restart --add "~/Applications/OmniDiskSweeper.app"
+
+
 
 ###############################################################################
 # Kill affected applications                                                  #
