@@ -25,6 +25,14 @@ defaults write com.apple.dock magnification -bool true
 defaults write com.apple.dock largesize -int 100
 
 ###############################################################################
+# Keyboard & Input                                                            #
+###############################################################################
+
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+
+###############################################################################
 # Night Shift (via nightlight CLI)                                            #
 ###############################################################################
 
