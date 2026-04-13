@@ -13,6 +13,10 @@ mkdir -p "$XDG_STATE_HOME"
 mkdir -p "$XDG_RUNTIME_DIR"
 chmod 700 "$XDG_RUNTIME_DIR"
 
+vscode() {
+    for EXT in $(cat install/Codefile); do code --install-extension $EXT; done
+}
+
 setup_brew() {
     if ! command -v brew &> /dev/null; then 
         echo "Setting up brew"
@@ -56,6 +60,11 @@ link_dotfiles() {
 }
 
 case "$1" in
+    vscode)
+        setup_brew
+        brew_casks
+        vscode
+        ;;
     link)
         setup_brew
         brew_packages
@@ -84,6 +93,7 @@ case "$1" in
         macos
         brew_casks
         link_dotfiles
+        vscode
         echo "Full setup complete"
         ;;
 esac

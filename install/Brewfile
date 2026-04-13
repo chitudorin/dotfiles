@@ -1,5 +1,7 @@
 tap "smudge/smudge"
 
+brew "maven"
+brew "openjdk@11"
 brew "dockutil"
 brew "smudge/smudge/nightlight"
 brew "stow"
