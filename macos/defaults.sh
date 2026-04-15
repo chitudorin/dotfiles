@@ -2,6 +2,9 @@
 # MacOS defaults                                                              #
 ###############################################################################
 
+# Light trackpad click
+defaults write com.apple.AppleMultitouchTrackpad "FirstClickThreshold" -int "0"
+
 # Don't rearrange Spaces
 defaults write com.apple.dock "mru-spaces" -bool "false"
 
