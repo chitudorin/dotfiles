@@ -1,3 +1,4 @@
+cask "mac-mouse-fix@2"
 cask "omnidisksweeper"
 cask "discord"
 cask "heroic"
