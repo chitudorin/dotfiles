@@ -8,3 +8,4 @@ export JAVA_HOME="$(brew --prefix openjdk@11)"
 export PATH="$JAVA_HOME/bin:$PATH"
 
 export PATH="/opt/homebrew/bin:$PATH"
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
